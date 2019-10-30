@@ -11,21 +11,25 @@ menu = {
 		"Mashed Potatoes" : 5.0
 	}
 
-if "Chicken" in menu:
-    first = list(menu)[0]       
-    x = menu.get("Chicken")
-    print(first + ": $" + str(x)) 
-    
-if "Pork" in menu:
-    print("We do not have Pork")
-else:
-    print("We do not have Pork")
+customer_order = []
+menu_name = ''
+total = 0
 
-if "Mashed Potatoes" in menu:
-    second = list(menu)[4]
-    y = menu.get("Mashed Potatoes")
-    print(second + ": $" + str(y)) 
-print("--------------------")
-print("Order Total: $" + str(x+y))
+while menu_name != 'N':
+    menu_name  = input('Enter an item: ')
+    if menu_name  != 'N':
+        customer_order.append(menu_name)
 
+print('')
+   
     
+for item in customer_order:
+    if item in menu:
+        item_price = menu.get(item)
+        print("{}: ${:.1f}".format(item,item_price))
+        total += item_price
+    else:
+        print('We do not have ' + item)
+
+print("---------------------")
+print("Order Total: ${:.1f}".format(total))
