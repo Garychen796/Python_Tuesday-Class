@@ -1,6 +1,6 @@
 # Guanyu Chen
 # 0953074
-# 10/20/2019
+# 10/29/2019
 # MSITM 6341
 
 menu = {
@@ -12,7 +12,7 @@ menu = {
 	}
 
 if "Chicken" in menu:
-    first = list(menu)[0]
+    first = list(menu)[0]       
     x = menu.get("Chicken")
     print(first + ": $" + str(x)) 
     
