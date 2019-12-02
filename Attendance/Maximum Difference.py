@@ -1,8 +1,6 @@
 
 def difference1(list1): 
-    #x-y = []
-    length = len(list1) 
-    list1.sort() 
-    x = list1[length-1]
-    y = list1[0]
-    return x-y
+    return max(list1)-min(list1)
+#making a list to test
+list1 = [2, 5, 10, 6]
+print("The difference is: ", str(difference1(list1)))
